@@ -1,6 +1,11 @@
 pipeline {
-  /*
-   * TODO: Implement pipeline stages/steps
-   *   See documentation: https://www.jenkins.io/doc/book/pipeline/syntax/#stages
-   */
+    agent any
+
+    stages {
+        stage('checkout') {
+            steps {
+                git 'https://github.com/Ram8319/devops-webapp.git'
+            }
+        }
+    }
 }
